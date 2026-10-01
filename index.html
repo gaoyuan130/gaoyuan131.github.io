@@ -1,7 +1,76 @@
----
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-author_profile: true
----
+<title>Personal Homepage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: single narrow column, left-aligned; intro, then ruled rows for work, notes and contact. */
+:root {
+  --bg: #fbfbf9;
+  --fg: #1c1f24;
+  --muted: #5d636d;
+  --line: #dfe1e4;
+  --accent: #2b5fd9;
+  --display: "Fraunces", Georgia, serif;
+  --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14161a; --fg: #eceef1; --muted: #a0a6b0; --line: #2a2e35; --accent: #8fb0ff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14161a; --fg: #eceef1; --muted: #a0a6b0; --line: #2a2e35; --accent: #8fb0ff;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+.wrap { max-width: 40rem; margin: 0 auto; padding-inline: 1.25rem; padding-block: 4rem 5rem; display: flex; flex-direction: column; gap: 3.5rem; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+h1 { font-family: var(--display); font-weight: 600; font-size: clamp(2.2rem, 7vw, 3.2rem); line-height: 1.1; margin: 0 0 1rem; letter-spacing: -0.01em; text-wrap: balance; }
+.lede { font-size: 1.15rem; color: var(--muted); margin: 0; max-width: 34rem; }
+h2 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-weight: 600; margin: 0 0 0.5rem; }
+ul { list-style: none; margin: 0; padding: 0; }
+.row { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.25rem 1.5rem; padding-block: 1.1rem; border-top: 1px solid var(--line); }
+.row:last-child { border-bottom: 1px solid var(--line); }
+.row .meta { color: var(--muted); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.row .main { min-width: 0; }
+.row strong { font-family: var(--display); font-weight: 600; font-size: 1.15rem; display: block; }
+.row p { margin: 0.2rem 0 0; color: var(--muted); }
+.contact li { padding-block: 0.15rem; }
+.contact span { color: var(--muted); display: inline-block; min-width: 6rem; }
+@media (max-width: 30rem) { .row { grid-template-columns: 1fr; } }
+</style>
+
+<main class="wrap">
+  <header>
+    <h1>Hello, I'm Yuan Gaur.</h1>
+    <p class="lede">I make software and write about what I learn along the way. This is a small home for my projects, notes and ways to reach me.</p>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li class="row"><span class="meta">2021.07 – 2024.07</span><div class="main"><strong>FPGA developer</strong><p>Worked on high-precision motion controller development, including linear motor and DC motor control.</p></div></li>
+      <li class="row"><span class="meta">2026</span><div class="main"><strong>Project one</strong><p>A short description of what it does and who it is for.</p></div></li>
+      <li class="row"><span class="meta">2025</span><div class="main"><strong>Project two</strong><p>Another project, with a line on the problem it solves.</p></div></li>
+      <li class="row"><span class="meta">2024</span><div class="main"><strong>Project three</strong><p>An older project worth keeping on the list.</p></div></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Notes</h2>
+    <ul>
+      <li class="row"><span class="meta">Sep 2026</span><div class="main"><strong>A note on something I learned</strong><p>One sentence that tells readers what they will get.</p></div></li>
+      <li class="row"><span class="meta">Jun 2026</span><div class="main"><strong>Another short write-up</strong><p>A second note, kept brief.</p></div></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Elsewhere</h2>
+    <ul class="contact">
+      <li><span>GitHub</span><a href="https://github.com/gaoyuan130">github.com/gaoyuan130</a></li>
+      <li><span>Email</span>you@example.com</li>
+    </ul>
+  </section>
+</main>
