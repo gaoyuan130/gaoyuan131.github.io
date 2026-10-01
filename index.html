@@ -38,6 +38,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 .row strong { font-family: var(--display); font-weight: 600; font-size: 1.15rem; display: block; }
 .row p { margin: 0.2rem 0 0; color: var(--muted); }
 .row { align-items: baseline; }
+.row.stacked { grid-template-columns: 1fr; }
+.row.stacked .intro { margin-top: 0.6rem; }
 .row .intro { color: var(--fg); margin: 0.5rem 0 0; }
 .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.9rem 0 0; }
 .chips li { border: 1px solid var(--line); border-radius: 999px; padding: 0.1rem 0.7rem; font-size: 0.8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
@@ -58,7 +60,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   <section>
     <h2>Projects</h2>
     <ul>
-      <li class="row"><span class="meta">2021.07 – 2024.07</span><div class="main"><strong>FPGA developer</strong>
+      <li class="row stacked"><span class="meta">2021.07 – 2024.07</span><div class="main"><strong>FPGA developer</strong>
         <p class="intro">Core developer on the R&amp;D and platform development of a high-performance servo drive system, responsible for the FPGA–embedded co-control architecture and the rollout of the software platform. Enabled 30+ control and algorithm solutions to be deployed at scale in products, significantly improving R&amp;D reuse and delivery efficiency.</p>
         <ul class="chips" aria-label="Highlights">
           <li>30+ solutions deployed</li><li>20+ critical issues resolved</li><li>40 kHz @ 10 Gbps / 10 Mbps links</li><li>50 ppm linearity</li><li>µA-level current resolution</li>
