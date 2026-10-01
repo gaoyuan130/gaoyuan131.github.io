@@ -37,6 +37,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .row .main { min-width: 0; }
 .row strong { font-family: var(--display); font-weight: 600; font-size: 1.15rem; display: block; }
 .row p { margin: 0.2rem 0 0; color: var(--muted); }
+.points { list-style: disc; padding-left: 1.1rem; margin: 0.4rem 0 0; color: var(--muted); display: flex; flex-direction: column; gap: 0.5rem; }
 .contact li { padding-block: 0.15rem; }
 .contact span { color: var(--muted); display: inline-block; min-width: 6rem; }
 @media (max-width: 30rem) { .row { grid-template-columns: 1fr; } }
@@ -51,7 +52,13 @@ ul { list-style: none; margin: 0; padding: 0; }
   <section>
     <h2>Projects</h2>
     <ul>
-      <li class="row"><span class="meta">2021.07 – 2024.07</span><div class="main"><strong>FPGA developer</strong><p>Worked on high-precision motion controller development, including linear motor and DC motor control.</p></div></li>
+      <li class="row"><span class="meta">2021.07 – 2024.07</span><div class="main"><strong>FPGA developer</strong>
+        <ul class="points">
+          <li>作为核心开发人员参与高性能伺服驱动系统研发与平台化建设，负责 FPGA 与嵌入式协同控制架构及软件平台落地，支撑 30+ 控制与算法方案在产品中规模化应用，显著提升研发复用率与交付效率。</li>
+          <li>主导高性能控制与通信功能交付，实现 SERDES/UART 高速通信链路（40kHz@10Gbps/10Mbps）、高精度 ADC 采样融合、DPWM 高精度发波及快速保护机制等关键能力落地，支撑系统高性能实时控制需求。</li>
+          <li>主导 20+ 关键技术问题攻关，解决通信丢帧、控制器异常停车、采样异常等核心稳定性问题，显著提升系统可靠性与工程可用性，保障产品顺利交付与量产应用。</li>
+          <li>推动整机控制性能达到高精度指标（如高控制带宽、50ppm 线性度、μA 级电流分辨能力等），实现从算法设计到工程落地的闭环优化。</li>
+        </ul></div></li>
       <li class="row"><span class="meta">2026</span><div class="main"><strong>Project one</strong><p>A short description of what it does and who it is for.</p></div></li>
       <li class="row"><span class="meta">2025</span><div class="main"><strong>Project two</strong><p>Another project, with a line on the problem it solves.</p></div></li>
       <li class="row"><span class="meta">2024</span><div class="main"><strong>Project three</strong><p>An older project worth keeping on the list.</p></div></li>
