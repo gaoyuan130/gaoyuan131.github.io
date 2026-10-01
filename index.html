@@ -38,7 +38,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 .row strong { font-family: var(--display); font-weight: 600; font-size: 1.15rem; display: block; }
 .row p { margin: 0.2rem 0 0; color: var(--muted); }
 .row { align-items: baseline; }
-.row.stacked { grid-template-columns: 1fr; }
+.row.stacked { grid-template-columns: auto 1fr; column-gap: 1.5rem; }
+.row.stacked .main { display: contents; }
+.row.stacked .intro, .row.stacked .chips, .row.stacked .points { grid-column: 1 / -1; }
 .row.stacked .intro { margin-top: 0.6rem; }
 .row .intro { color: var(--fg); margin: 0.5rem 0 0; }
 .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.9rem 0 0; }
